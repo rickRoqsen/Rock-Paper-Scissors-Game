@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  background: radial-gradient(
+    134.34% 134.34% at 50% 0%,
+    #1f3757 0%,
+    #131537 100%
+  );
+  height: 768px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.score-board {
+  border: 3px solid rgba(255, 255, 255, 0.289199);
+  border-radius: 15px;
+  width: 700px;
+  height: 150px;
+  margin-top: 48px;
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score {
+  background-color: #ffffff;
+  width: 150px;
+  height: 114px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.score p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  color: #2a45c2;
+}
+
+.score .scores {
+  font-size: 64px;
+  margin-top: 0;
+  padding: 0;
+  color: #565468;
+}
+
+.play-area {
+  background-image: url("/resources/assets/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 476px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 76px;
+}
+
+.container {
+  height: 198px;
+  width: 203px;
+  background: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p {
+  border: 20px solid #4664f4;
+  border-radius: 50%;
+  box-shadow: 0 10px #2a45c2;
+  margin-right: 30px;
+}
+
+.r {
+  border: 20px solid #db2e4d;
+  border-radius: 50%;
+  box-shadow: 0px 10px #9d1634;
+}
+
+.s {
+  border: 20px solid #eb9f0e;
+  border-radius: 50%;
+  box-shadow: 0 10px #ebbf4f;
+  margin-left: 30px;
+}
+.opt {
+  height: 96px;
+  width: 96px;
+}
+
+.container:hover {
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+footer {
+  width: 128px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  align-self: flex-end;
+  margin-right: 20px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 20px;
+}
+
+footer:hover {
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
+
+.rules {
+  font-family: "Barlow Semi Condensed";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.selection {
+  width: 900px;
+  display: none;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.selection > div {
+  flex: 1;
+}
+
+.selection img {
+  width: 110px;
+  height: 110px;
+}
+
+.ring {
+  background: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%);
+  width: 225px;
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+h3 {
+  color: #f3f3f3;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 24px;
+}
+.user-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.house-selection {
+  /* visibility: hidden; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-selection .p {
+  margin: 0;
+}
+
+.house-selection .s {
+  margin: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.decider {
+  color: #f3f3f3;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.decider h1 {
+  font-size: 56px;
+}
+
+.new-game {
+  background-color: #fff;
+  color: #3b4262;
+  font-size: 16px;
+  width: 220px;
+  height: 48px;
+  border-radius: 5px;
+  padding-top: 15px;
+  margin-top: 20px;
+  transition: all 0.2s;
+}
+
+.new-game:hover {
+  color: #db2e4d;
+  cursor: pointer;
+  transform: translate3d(0px, -4px, 0px);
+}
+
+.rule-box {
+  position: absolute;
+  top: 250px;
+  z-index: 1;
+  background-color: #ffffff;
+  width: 400px;
+  height: 415px;
+  padding: 20px 20px;
+  display: none;
+  flex-direction: column;
+}
+
+.rule-box h2 {
+  color: #3b4262;
+}
+
+.rule-box img {
+  width: 305px;
+  height: 271px;
+  align-self: center;
+  margin-top: 30px;
+}
+
+.close {
+  width: 19.09px;
+  height: 19.09px;
+  position: absolute;
+  right: 20px;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 5px;
+  height: 20px;
+  background-color: #3b4262;
+  transform: rotate(45deg) translate(-50%, -50%);
+  transform-origin: top left;
+  content: "";
+  opacity: 0.25;
+}
+.close:after {
+  transform: rotate(-45deg) translate(-50%, -50%);
+}
+
+/* For Mobile phones */
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .score-board {
+    width: 311px;
+    height: 96px;
+    padding: 5px 10px;
+  }
+
+  .score {
+    width: 80px;
+    height: 72px;
+    font-size: 10px;
+  }
+
+  .score p {
+    font-size: 10px;
+  }
+
+  #logo {
+    width: 83px;
+    height: 48px;
+  }
+
+  .score .scores {
+    font-size: 40px;
+  }
+
+  .play-area {
+    width: 312px;
+    height: 282px;
+    background-size: 166px 188px;
+    margin-top: 105px;
+  }
+
+  .container,
+  .ring {
+    width: 100px;
+    height: 100px;
+    border-width: 10px;
+  }
+
+  .r {
+    box-shadow: 0px 5px #9d1634;
+  }
+
+  .s {
+    box-shadow: 0 5px #c76c1b;
+  }
+
+  .p {
+    box-shadow: 0 5px #2a45c2;
+  }
+
+  .container img {
+    width: 48px;
+    height: 56px;
+  }
+
+  footer {
+    margin-right: 0;
+    align-self: center;
+  }
+
+  .selection {
+    width: 311px;
+  }
+
+  .selection img {
+    width: 48px;
+    height: 56px;
+  }
+
+  .user-selection {
+    flex-direction: column-reverse;
+    position: relative;
+    left: 70px;
+  }
+
+  .house-selection {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    right: 70px;
+    width: 100px;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 15px;
+    margin-top: 20px;
+    white-space: nowrap;
+  }
+
+  .decider {
+    width: 220px;
+    height: 131;
+    position: relative;
+    top: 200px;
+  }
+
+  .rule-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    margin: 0;
+  }
+
+  .rule-box img {
+    margin: auto auto;
+  }
+
+  .close {
+    width: 19.09px;
+    height: 19.09px;
+    position: absolute;
+    right: 45%;
+    bottom: 10%;
+  }
+
+  .rule-box h2 {
+    margin: 80px auto -20px auto;
+  }
+}

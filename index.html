@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./resources/css/style.css" />
+
+    <title>Rock Paper Scissors Game</title>
+  </head>
+  <body>
+    <div class="body">
+      <div class="score-board">
+        <img src="./resources/assets/logo.svg" alt="logo" id="logo" />
+        <div class="score">
+          <p>SCORE</p>
+          <p class="scores">0</p>
+        </div>
+      </div>
+      <div class="play-area">
+        <div class="container p">
+          <img
+            class="paper opt"
+            src="/resources/assets/icon-paper.svg"
+            alt="Paper"
+            onclick="userChoice('paper')"
+          />
+        </div>
+        <div class="container s">
+          <img
+            class="scissors opt"
+            src="/resources/assets/icon-scissors.svg "
+            alt="Scissors"
+            onclick="userChoice('scissors')"
+          />
+        </div>
+        <div class="container r">
+          <img
+            class="rock opt"
+            src="/resources/assets/icon-rock.svg"
+            alt="Rock"
+            onclick="userChoice('rock')"
+          />
+        </div>
+      </div>
+      <footer>
+        <p class="rules">RULES</p>
+      </footer>
+      <div class="rule-box">
+        <h2>RULES</h2>
+        <div class="close"></div>
+        <img src="/resources/assets/image-rules.svg" alt="rules" />
+      </div>
+      <div class="selection">
+        <div class="user-selection">
+          <h3>YOU PICKED</h3>
+          <div class="ring p">
+            <img
+              id="user-picked"
+              src="/resources/assets/icon-paper.svg"
+              alt="Paper"
+            />
+          </div>
+        </div>
+        <div class="decider">
+          <h1 class="decision">YOU WIN</h1>
+          <div class="new-game" onclick="playAgain()">PLAY AGAIN</div>
+        </div>
+        <div class="house-selection">
+          <h3>THE HOUSE PICKED</h3>
+          <div class="ring s">
+            <img
+              id="house-picked"
+              src="/resources/assets/icon-scissors.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/Js/main.js"></script>
+  </body>
+</html>
