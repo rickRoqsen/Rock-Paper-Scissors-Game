@@ -4,9 +4,9 @@ setTimeout(() => {
 
 
 const userOption = {
-    "rock": "/resources/assets/icon-rock.svg",
-    "paper": "/resources/assets/icon-paper.svg",
-    "scissors": "/resources/assets/icon-scissors.svg"
+    "rock": "./resources/assets/icon-rock.svg",
+    "paper": "./resources/assets/icon-paper.svg",
+    "scissors": "./resources/assets/icon-scissors.svg"
 }
 
 let score = 0;
