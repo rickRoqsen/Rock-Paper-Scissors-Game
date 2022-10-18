@@ -97,13 +97,14 @@
   box-shadow: 0 10px #ebbf4f;
   margin-left: 30px;
 }
+
 .opt {
   height: 96px;
   width: 96px;
 }
 
 .container:hover {
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transform: translate3d(0px, -10px, 0px);
 }
@@ -127,7 +128,7 @@ footer:hover {
 }
 
 .rules {
-  /* font-family: "Barlow Semi Condensed"; */
+  font-family: "Barlow Semi Condensed";
   font-size: 16px;
   font-weight: 600;
   line-height: 19px;
@@ -160,6 +161,7 @@ footer:hover {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  box-shadow: 0 0 500px rgba(255, 255, 255, 0.5);
 }
 
 h3 {
@@ -303,7 +305,7 @@ h3 {
     width: 312px;
     height: 282px;
     background-size: 166px 188px;
-    margin-top: 50px;
+    margin-top: 80px;
   }
 
   .container,

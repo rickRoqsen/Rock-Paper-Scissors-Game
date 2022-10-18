@@ -17,8 +17,39 @@ const userChoice = opt => {
     option.style.display = 'none'
     let selection = document.querySelector('.selection');
     selection.style.display = "flex";
-    document.getElementById("user-picked").src = userOption[opt];
+
+    document.getElementById("user-picked").src = userOption[opt]
+
     
+    if (opt === "scissors") {
+        document.querySelector(".user-selection .p").style.border = "20px solid #eb9f0e"
+        document.querySelector(".user-selection .p").style.boxShadow = "0 10px #ebbf4f"
+        if (screen.width < 800) {
+            // document.querySelector(".user-selection .p").style.border = "10px solid #eb9foe #bcf4f"
+            document.querySelector(".user-selection .p").style.border = "10px solid #eb9f1e"
+            document.querySelector(".user-selection .p").style.boxShadow = "0 5px #ebbf4f"
+        }
+    }
+
+    if (opt === "rock") {
+        document.querySelector(".user-selection .p").style.border = "20px solid #db2e4d"
+        document.querySelector(".user-selection .p").style.boxShadow = "0 10px #9d1634"
+        if (screen.width < 800) {
+            document.querySelector(".user-selection .p").style.border = "10px solid #db2e4d"
+            document.querySelector(".user-selection .p").style.boxShadow = "0 5px #9d1634"
+        }
+    }
+
+    if (opt === "paper") {
+        document.querySelector(".user-selection .p").style.border = "20px solid #4664f4"
+        document.querySelector(".user-selection .p").style.boxShadow = "0 10px #2a45c2"
+    if (screen.width < 800) {
+        document.querySelector(".user-selection .p").style.border = "10px solid #4664f4"
+        document.querySelector(".user-selection .p").style.boxShadow = "0 5px #2a45c2"
+    }
+    }
+    
+
     computerChoice(opt)
 
 }
@@ -33,7 +64,34 @@ const computerChoice = (opt) => {
         let houseSelection =  document.querySelector(".house-selection .s")
         houseSelection.style.display = "flex";
         houseSelection.style.visibility = "visible";
-        houseSelection.style.opacity = 1;   
+        houseSelection.style.opacity = 1;
+
+        if (houseChoice === "rock") {
+            document.querySelector(".house-selection .s").style.border = "20px solid #db2e4d"
+            document.querySelector(".house-selection .s").style.boxShadow = "0 5px #9d1634"
+            if (screen.width < 800) {
+                document.querySelector(".house-selection .s").style.border = "10px solid #db2e4d"
+                document.querySelector(".house-selection .s").style.boxShadow = "0 5px #9d1634"
+            }
+        }
+
+        if (houseChoice === "paper") {
+            document.querySelector(".house-selection .s").style.border = "20px solid #4664f4"
+            document.querySelector(".house-selection .s").style.boxShadow = "0 10px #2a45c2"
+        if (screen.width < 800) {
+            document.querySelector(".house-selection .s").style.border = "10px solid #4664f4"
+            document.querySelector(".house-selection .s").style.boxShadow = "0 5px #2a45c2"
+        }
+        }
+
+        if (houseChoice === "scissors") {
+            document.querySelector(".house-selection .s").style.border = "20px solid #eb9f0e"
+            document.querySelector(".house-selection .s").style.boxShadow = "0 10px #ebbf4f"
+            if (screen.width < 800) {
+                document.querySelector(".house-selection .s").style.border = "10px solid #eb9f0e"
+                document.querySelector(".house-selection .s").style.boxShadow = "0 5px #ebbf4f"
+            }
+        }   
 
         showDecision()
         
@@ -67,6 +125,7 @@ const decider = (userPicked, housePicked) => {
     if (userPicked === 'scissors' && housePicked === 'paper') {
         setDecision("YOU WIN")
         setScore(score + 1)
+        document.querySelector(".container").boxShadow = "0 0 500px rgba(255, 255, 255, 0.4)"
     }
     if (userPicked === 'paper' && housePicked === 'paper'){
         setDecision("DRAW")
